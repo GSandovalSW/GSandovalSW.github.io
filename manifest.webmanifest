@@ -1,6 +1,6 @@
 {
     "name": "Doctores app",
-    "short_name": "app",
+    "short_name": "Doctores app",
     "id":".",
     "start_url": ".",
     "display": "standalone",
