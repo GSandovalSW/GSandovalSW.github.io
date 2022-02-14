@@ -2,7 +2,7 @@ const cacheName = 'news-v1';
 
 const staticAssets = [
     './',
-    './index2.html',
+    './index.html',
     './css/navbar.css',
     './css/head.css',
     './css/calculadora.css',
