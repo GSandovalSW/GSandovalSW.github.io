@@ -10,6 +10,7 @@ const staticAssets = [
     './css/footer.css',
     './css/bootstrap.min.css',
     './scripts.js',
+    './js/bootstrap.bundle.min.js',
     './manifest.webmanifest'
 ];
 
