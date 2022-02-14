@@ -1,0 +1,23 @@
+{
+    "name": "Doctores app",
+    "short_name": "app",
+    "id":".",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#fff",
+    "description": "A calculate app.",
+    "icons": [
+        {
+            "src":"assets/img/calculadora/signo-de-hospital512x512.png",
+            "sizes":"512x512",
+            "type":"image/png"
+        },
+        {
+            "src":"assets/img/calculadora/hospital128x128.png",
+            "sizes":"128x128",
+            "type":"image/png"
+        }
+
+    ]
+
+}

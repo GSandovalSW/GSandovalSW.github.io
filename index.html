@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+    <!--Styles-->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Custom styles for this navbar -->
+    <link href="css/navbar.css" rel="stylesheet">
+    <!--<style>
+        .bd-placeholder-img {
+          font-size: 1.125rem;
+          text-anchor: middle;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          user-select: none;
+        }
+  
+        @media (min-width: 768px) {
+          .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+          }
+        }
+      </style>-->
+
+    <!--Custom styles for this head-->
+    <link href="css/head.css" rel="stylesheet">
+
+    <!--Custom styles for this calculadora-->
+    <link href="css/calculadora.css" rel="stylesheet">
+
+    <!--Custom styles for this about-->
+    <link href="css/about.css" rel="stylesheet">
+
+    <!--Custom styles for this footer-->
+    <link href="css/footer.css" rel="stylesheet">
+
+    <!--Custom styles for this copyright-->
+    <link href="css/copyright.css" rel="stylesheet">
+    
+    <!--Manifest-->
+    <link rel="manifest" href="./manifest.webmanifest">
+</head>
+<body>
+    <!--Navigation-->
+    <nav class="navbar fixed-top navbar-expand-sm navbar-dark text-uppercase" aria-label="Third navbar example" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#page-top">Home</a>
+            <button class="navbar-toggler text-uppercase font-weight-bold text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarsExample03">
+                <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#calculadora">Calculadoras</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Acerca de</a>
+                    </li>
+                    
+                    <!--<li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled">Disabled</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdown03">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>-->
+                </ul>
+                <!--<form>
+                    <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                </form>-->
+            </div>
+        </div>
+    </nav>
+
+    <!-- Masthead-->
+    <header class="masthead text-white text-center" id="page-top">
+        <div class="container d-flex align-items-center flex-column">
+            <!-- Masthead Avatar Image-->
+            <img class="masthead-avatar mb-5" src="assets/img/signo-de-hospital512x512.png" alt="..." />
+            <!-- Masthead Heading-->
+            <h1 class="masthead-heading text-uppercase mb-0">App Doctores</h1>
+            <!-- Icon Divider-->
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- Masthead Subheading-->
+            <p class="masthead-subheading font-weight-light mb-0">Datos - Información</p>
+        </div>
+    </header>
+
+    <!-- calculadora Section-->
+    <section class="page-section calculadora" id="calculadora">
+        <div class="container">
+            <!-- calculadora Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Calculadoras</h2>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- calculadora Grid Items-->
+            <div class="row justify-content-center">
+                <!-- calculadora Item 1-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="calculadora-item mx-auto" data-bs-toggle="modal" data-bs-target="#calculadoraModal1">
+                        <div class="calculadora-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="calculadora-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/img/calculadora/cabin.png" alt="..." />
+                    </div>
+                </div>
+                <!-- calculadora Item 2-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="calculadora-item mx-auto" data-bs-toggle="modal" data-bs-target="#calculadoraModal2">
+                        <div class="calculadora-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="calculadora-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/img/calculadora/cake.png" alt="..." />
+                    </div>
+                </div>
+                <!-- calculadora Item 3-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="calculadora-item mx-auto" data-bs-toggle="modal" data-bs-target="#calculadoraModal3">
+                        <div class="calculadora-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="calculadora-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/img/calculadora/circus.png" alt="..." />
+                    </div>
+                </div>
+                <!-- calculadora Item 4-->
+                <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
+                    <div class="calculadora-item mx-auto" data-bs-toggle="modal" data-bs-target="#calculadoraModal4">
+                        <div class="calculadora-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="calculadora-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/img/calculadora/game.png" alt="..." />
+                    </div>
+                </div>
+                <!-- calculadora Item 5-->
+                <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
+                    <div class="calculadora-item mx-auto" data-bs-toggle="modal" data-bs-target="#calculadoraModal5">
+                        <div class="calculadora-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="calculadora-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/img/calculadora/safe.png" alt="..." />
+                    </div>
+                </div>
+                <!-- calculadora Item 6-->
+                <div class="col-md-6 col-lg-4">
+                    <div class="calculadora-item mx-auto" data-bs-toggle="modal" data-bs-target="#calculadoraModal6">
+                        <div class="calculadora-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="calculadora-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/img/calculadora/submarine.png" alt="..." />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section-->
+    <section class="page-section about text-white mb-0" id="about">
+        <div class="container">
+            <!-- About Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-white">Acerca de</h2>
+            <!-- Icon Divider-->
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- About Section Content-->
+            <div class="row">
+                <div class="col-lg-4 ms-auto"><p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel mi id tortor dapibus facilisis. Aenean egestas eu enim ut tempus. Duis eu consequat ante. Fusce nisl augue, faucibus ut diam id, aliquet malesuada orci. Suspendisse mattis massa ac dui bibendum, vel pulvinar dui sagittis. Nunc at magna id mauris maximus scelerisque. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin lacus diam, sagittis quis metus quis, cursus accumsan nisl.</p></div>
+                <div class="col-lg-4 me-auto"><p class="lead">Morbi mauris lectus, sodales quis ultrices eget, pulvinar scelerisque purus. Donec tristique, erat ut blandit interdum, eros eros consequat sapien, id tincidunt neque nulla posuere leo. Maecenas vel pulvinar mauris. Pellentesque eget lobortis mauris, placerat sagittis libero. Pellentesque non leo nisi. Nulla eget eros eu odio pulvinar venenatis. Etiam vitae nulla maximus, congue metus id, finibus mauris.</p></div>
+            </div>
+            <!-- About Section Button-->
+            <!--<div class="text-center mt-4">
+                <a class="btn btn-xl btn-outline-light" href="https://startbootstrap.com/theme/freelancer/">
+                    <i class="fas fa-download me-2"></i>
+                    Free Download!
+                </a>
+            </div>-->
+        </div>
+    </section>
+
+    <!-- Footer-->
+    <footer class="footer text-center">
+        <div class="container">
+            <div class="row">
+                <!-- Footer Location-->
+                <!--<div class="col-lg-4 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4">Location</h4>
+                    <p class="lead mb-0">
+                        2215 John Daniel Drive
+                        <br />
+                        Clark, MO 65243
+                    </p>
+                </div>-->
+                <!-- Footer Social Icons-->
+                <!--<div class="col-lg-4 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4">Around the Web</h4>
+                    <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-twitter"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-dribbble"></i></a>
+                </div>-->
+                <!-- Footer About Text-->
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4">About Freelancer</h4>
+                    <p class="lead mb-0">
+                        Freelance is a free to use, MIT licensed Bootstrap theme created by
+                        <a href="http://startbootstrap.com" target="blank">Start Bootstrap</a>
+                        .
+                    </p>                        
+                </div>
+                <!-- Atribuciones-->
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4">Atribuciones</h4>
+                    <p class="lead mb-0">
+                        <a href="https://www.flaticon.es/iconos-gratis/cruzar" title="cruzar iconos" target="_blank">Cruzar iconos creados por Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.es/iconos-gratis/salud" title="salud iconos" target="_blank">Salud iconos creados por Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/reservation" title="reservation icons" target="_blank">Reservation icons created by photo3idea_studio - Flaticon</a>
+                    </p>                        
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Copyright Section-->
+    <div class="copyright py-4 text-center text-white">
+        <div class="container">
+            <small>Copyright &copy; 2021</small>                
+        </div>
+    </div>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./scripts.js"></script>
+</body>
+</html>
