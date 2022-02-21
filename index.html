@@ -272,29 +272,29 @@
                                         <tbody>
                                             <tr>
                                                 <th>Hb</th>
-                                                <th><input class="form-control form-control-sm" type="number"/></th>
+                                                <th><input class="form-control form-control-sm" type="number" id="cao2Hb"/></th>
                                             </tr>
                                             <tr>
                                                 <th>SaO2</th>
-                                                <th><input class="form-control form-control-sm" type="number"/></th>
+                                                <th><input class="form-control form-control-sm" type="number" id="cao2Sao2"/></th>
                                             </tr>
                                             <tr>
                                                 <th>PaO2</th>
-                                                <th><input class="form-control form-control-sm" type="number"/></th>
+                                                <th><input class="form-control form-control-sm" type="number" id="cao2Pao2"/></th>
                                             </tr>
                                             <tr>
                                                 <th>CONST 1</th>
-                                                <th><input class="form-control form-control-sm" type="number" value="1.34" disabled/></th>
+                                                <th><input class="form-control form-control-sm" type="number" value="" id="cao2Const1" disabled/></th>
                                             </tr>
                                             <tr>
                                                 <th>CONST 2</th>
-                                                <th><input class="form-control form-control-sm" type="number" value="0.003" disabled/></th>
+                                                <th><input class="form-control form-control-sm" type="number" value="" id="cao2Const2" disabled/></th>
                                             </tr>
                                         </tbody>
                                         <tfoot>
                                             <tr>
-                                                <th><button type="button" class="btn btn-primary">Resultado</button></th>
-                                                <th><input class="form-control form-control-sm" type="number" disabled /></th>
+                                                <th><button type="button" class="btn btn-primary" onclick="CalcularCao2()">Resultado</button></th>
+                                                <th><input class="form-control form-control-sm" type="number" id="cao2Resultado" disabled /></th>
                                             </tr>
                                         </tfoot>
                                     </table>
@@ -607,6 +607,7 @@
     
 
     <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/calculadora.js"></script>
     <script src="./scripts.js"></script>
 </body>
 </html>
