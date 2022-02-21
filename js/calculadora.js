@@ -36,7 +36,7 @@ function CalcularCao2(){
     let cao2Pao2 = document.getElementById("cao2Pao2").value;
     if(cao2Hb == '' || cao2Sao2 == '' || cao2Pao2 == ''){
         //console.log("Calculo CaO2: Falta ingresar uno varios datos.");
-        alert("Calculo CaO2: Falta ingresar uno varios datos.");
+        alert("Calculo CaO2: Falta ingresar uno o más datos para calcular Cao2.");
     }else{
         const resultado = new CAO2(cao2Hb, cao2Sao2, cao2Pao2);
         document.getElementById("cao2Resultado").value = resultado.Cao2;
