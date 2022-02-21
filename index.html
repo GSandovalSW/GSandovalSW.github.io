@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="assets/hospital.ico" />
 
     <!--Styles-->
     <link href="css/bootstrap.min.css" rel="stylesheet" />
@@ -234,39 +234,366 @@
     <!--Modal-->
     <!--Modal calculadora Item 1-->
     <div class="modal fade" id="calculadoraModal1">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-xl">
             <div class="modal-content">
       
                 <!-- Modal Header -->
                 <div class="modal-header text-center">
-                    <!--<h4 class="modal-title">Índices de oxigenación</h4>-->
+                    <h4 class="modal-title text-secondary text-uppercase text-center">Índices de oxigenación</h4>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
         
                 <!-- Modal body -->
-                <div class="modal-body text-center">
+                <div class="modal-body">
                     <div class="container">
                         <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <!-- Portfolio Modal - Title-->
-                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Índices de oxigenación</h2>
-                                <!-- Icon Divider-->
-                                <div class="divider-custom">
-                                    <div class="divider-custom-line"></div>
-                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                    <div class="divider-custom-line"></div>
+                            <!-- Portfolio Modal - Title
+                            <h4 class="portfolio-modal-title text-secondary text-uppercase text-center mb-0">Índices de oxigenación</h4>-->
+                            <!-- Icon Divider
+                            <div class="divider-custom">
+                                <div class="divider-custom-line"></div>
+                                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                <div class="divider-custom-line"></div>
+                            </div>-->
+
+                            <!-- Content Modal - Table-->
+                            
+                            <!--Table 1-->
+                            <div class="col-md-6 col-lg-4 mb-5">
+                                <h4 class="text-secondary">CaO2</h4>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                        <thead class="table-dark">
+                                            <tr>
+                                                <th>Entrada</th>
+                                                <th>Valor</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th>Hb</th>
+                                                <th><input class="form-control form-control-sm" type="number"/></th>
+                                            </tr>
+                                            <tr>
+                                                <th>SaO2</th>
+                                                <th><input class="form-control form-control-sm" type="number"/></th>
+                                            </tr>
+                                            <tr>
+                                                <th>PaO2</th>
+                                                <th><input class="form-control form-control-sm" type="number"/></th>
+                                            </tr>
+                                            <tr>
+                                                <th>CONST 1</th>
+                                                <th><input class="form-control form-control-sm" type="number" value="1.34" disabled/></th>
+                                            </tr>
+                                            <tr>
+                                                <th>CONST 2</th>
+                                                <th><input class="form-control form-control-sm" type="number" value="0.003" disabled/></th>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <th><button type="button" class="btn btn-primary">Resultado</button></th>
+                                                <th><input class="form-control form-control-sm" type="number" disabled /></th>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
                                 </div>
-
-                                <!-- Portfolio Modal - Text-->
-                                <p class="mb-4"></p>
-
-                                
-
+                            </div> 
+                            
+                            <!--Table 2-->
+                            <div class="col-md-6 col-lg-4 mb-5">
+                                <h4 class="text-secondary">CvO2</h4>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                        <thead class="table-dark">
+                                            <tr>
+                                                <th>Entrada</th>
+                                                <th>Valor</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th>Hb</th>
+                                                <th><input class="form-control form-control-sm" type="number"/></th>
+                                            </tr>
+                                            <tr>
+                                                <th>SvO2</th>
+                                                <th><input class="form-control form-control-sm" type="number"/></th>
+                                            </tr>
+                                            <tr>
+                                                <th>PvO2</th>
+                                                <th><input class="form-control form-control-sm" type="number"/></th>
+                                            </tr>
+                                            <tr>
+                                                <th>CONST 1</th>
+                                                <th><input class="form-control form-control-sm" type="number" value="1.34" disabled/></th>
+                                            </tr>
+                                            <tr>
+                                                <th>CONST 2</th>
+                                                <th><input class="form-control form-control-sm" type="number" value="0.003" disabled/></th>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <th><button type="button" class="btn btn-primary">Resultado</button></th>
+                                                <th><input class="form-control form-control-sm" type="number" disabled /></th>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div> 
+                            
+                            <!--Table 3-->
+                            <div class="col-md-6 col-lg-4 mb-5">
+                                <h4 class="text-secondary">Delta</h4>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                        <thead class="table-dark">
+                                            <tr>
+                                                <th>Entrada</th>
+                                                <th>Valor</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th>CaO2</th>
+                                                <th><input class="form-control form-control-sm" type="number" value="" disabled/></th>
+                                            </tr>
+                                            <tr>
+                                                <th>CvO2</th>
+                                                <th><input class="form-control form-control-sm" type="number" value="" disabled/></th>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <th><button type="button" class="btn btn-primary">Resultado</button></th>
+                                                <th><input class="form-control form-control-sm" type="number" disabled /></th>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
                             </div>
+                            
+                            <!--Table 4-->
+                            <div class="col-md-6 col-lg-4 mb-5">
+                                <h4 class="text-secondary">PAFI</h4>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                        <thead class="table-dark">
+                                            <tr>
+                                                <th>Entrada</th>
+                                                <th>Valor</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th>PO2</th>
+                                                <th><input class="form-control form-control-sm" type="number" value="" /></th>
+                                            </tr>
+                                            <tr>
+                                                <th>FiO2</th>
+                                                <th><input class="form-control form-control-sm" type="number" value="" /></th>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <th><button type="button" class="btn btn-primary">Resultado</button></th>
+                                                <th><input class="form-control form-control-sm" type="number" disabled /></th>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                            
+                            <!--Table 5-->
+                            <div class="col-md-6 col-lg-4 mb-5">
+                                <h4 class="text-secondary">IO2</h4>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                        <thead class="table-dark">
+                                            <tr>
+                                                <th>Entrada</th>
+                                                <th>Valor</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th>Pm</th>
+                                                <th><input class="form-control form-control-sm" type="number"/></th>
+                                            </tr>
+                                            <tr>
+                                                <th>FiO2</th>
+                                                <th><input class="form-control form-control-sm" type="number" disabled/></th>
+                                            </tr>
+                                            <tr>
+                                                <th>PO2</th>
+                                                <th><input class="form-control form-control-sm" type="number" disabled/></th>
+                                            </tr>
+                                            <tr>
+                                                <th>CONST 1</th>
+                                                <th><input class="form-control form-control-sm" type="number" value="100" disabled/></th>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <th><button type="button" class="btn btn-primary">Resultado</button></th>
+                                                <th><input class="form-control form-control-sm" type="number" disabled /></th>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!--Table 6-->
+                            <div class="col-md-6 col-lg-4 mb-5">
+                                <h4 class="text-secondary">EO2</h4>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                        <thead class="table-dark">
+                                            <tr>
+                                                <th>Entrada</th>
+                                                <th>Valor</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th>Delta</th>
+                                                <th><input class="form-control form-control-sm" type="number" value="" disabled /></th>
+                                            </tr>
+                                            <tr>
+                                                <th>CaO2</th>
+                                                <th><input class="form-control form-control-sm" type="number" value="" disabled/></th>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <th><button type="button" class="btn btn-primary">Resultado</button></th>
+                                                <th><input class="form-control form-control-sm" type="number" disabled /></th>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!--Table 7-->
+                            <div class="col-md-6 col-lg-4 mb-5">
+                                <h4 class="text-secondary">Gradiente</h4>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                        <thead class="table-dark">
+                                            <tr>
+                                                <th>Entrada</th>
+                                                <th>Valor</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th>Baro</th>
+                                                <th><input class="form-control form-control-sm" type="number"/></th>
+                                            </tr>
+                                            <tr>
+                                                <th>FiO2</th>
+                                                <th><input class="form-control form-control-sm" type="number" disabled/></th>
+                                            </tr>
+                                            <tr>
+                                                <th>PcO2</th>
+                                                <th><input class="form-control form-control-sm" type="number"/></th>
+                                            </tr>
+                                            <tr>
+                                                <th>CONST 1</th>
+                                                <th><input class="form-control form-control-sm" type="number" value="0.8" disabled/></th>
+                                            </tr>
+                                            <tr>
+                                                <th>PaO2</th>
+                                                <th><input class="form-control form-control-sm" type="number" value="" disabled/></th>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <th><button type="button" class="btn btn-primary">Resultado</button></th>
+                                                <th><input class="form-control form-control-sm" type="number" disabled /></th>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!--Table 8-->
+                            <div class="col-md-6 col-lg-4 mb-5">
+                                <h4 class="text-secondary">GC</h4>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                        <thead class="table-dark">
+                                            <tr>
+                                                <th>Entrada</th>
+                                                <th>Valor</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th>Delta</th>
+                                                <th><input class="form-control form-control-sm" type="number" value="" disabled /></th>
+                                            </tr>
+                                            <tr>
+                                                <th>CONST 1</th>
+                                                <th><input class="form-control form-control-sm" type="number" value="100" disabled/></th>
+                                            </tr>
+                                            <tr>
+                                                <th>CaO2</th>
+                                                <th><input class="form-control form-control-sm" type="number" value="" disabled/></th>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <th><button type="button" class="btn btn-primary">Resultado</button></th>
+                                                <th><input class="form-control form-control-sm" type="number" disabled /></th>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!--Table 9-->
+                            <div class="col-md-6 col-lg-4 mb-5">
+                                <h4 class="text-secondary">VO2</h4>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                        <thead class="table-dark">
+                                            <tr>
+                                                <th>Entrada</th>
+                                                <th>Valor</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th>Delta</th>
+                                                <th><input class="form-control form-control-sm" type="number" value="" disabled /></th>
+                                            </tr>
+                                            <tr>
+                                                <th>GC</th>
+                                                <th><input class="form-control form-control-sm" type="number" value="" disabled/></th>
+                                            </tr>
+                                            <tr>
+                                                <th>CONST 1</th>
+                                                <th><input class="form-control form-control-sm" type="number" value="10" disabled/></th>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <th><button type="button" class="btn btn-primary">Resultado</button></th>
+                                                <th><input class="form-control form-control-sm" type="number" disabled /></th>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+
                         </div>
                     </div>                    
                 </div>
-        
+                
+                
                 <!-- Modal footer -->
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
