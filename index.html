@@ -135,20 +135,20 @@
                             </div>
                         </div>
                         <img class="img-fluid" src="assets/img/calculadora/blood.png" alt="..." />
+                        <label>ÍNDICES DE OXIGENACIÓN</label>
                     </div>
                 </div>
                 <!-- calculadora Item 2-->
-                <div class="col-md-6 col-lg-4 mb-5">
+                <!--<div class="col-md-6 col-lg-4 mb-5">
                     <div class="calculadora-item mx-auto text-center" data-bs-toggle="modal" data-bs-target="#calculadoraModal2">
                         <div class="calculadora-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                             <div class="calculadora-item-caption-content text-center text-white">
-                                <!--<i class="fas fa-plus fa-3x"></i>-->
                                 PRONTO MÁS CALCULADORAS...
                             </div>
                         </div>
                         <img class="img-fluid" src="assets/img/calculadora/work-in-progress.png" alt="..." />
                     </div>
-                </div>
+                </div>-->
             </div>
         </div>
     </section>
@@ -167,7 +167,6 @@
             <!-- About Section Content-->
             <div class="row">
                 <div class="col-lg-4 ms-auto"><p class="lead">El índice de oxigenación se utiliza para evaluar la intensidad de la asistencia respiratoria que se requiere para mantener la oxigenación. Se utiliza en neonatología y en pediatría para evaluar la posible necesidad de uso de ECMO.</p></div>
-                <div class="col-lg-4 me-auto"><p class="lead">Pronto más calculadoras...</p></div>
             </div>
             <!-- About Section Button-->
             <!--<div class="text-center mt-4">
@@ -240,7 +239,7 @@
                 <!-- Modal Header -->
                 <div class="modal-header text-center">
                     <h4 class="modal-title text-secondary text-uppercase text-center">Índices de oxigenación</h4>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" onclick="BorrarTodo()"></button>
                 </div>
         
                 <!-- Modal body -->
@@ -293,7 +292,10 @@
                                         </tbody>
                                         <tfoot>
                                             <tr>
-                                                <th><button type="button" class="btn btn-primary" onclick="CalcularCao2()">Resultado</button></th>
+                                                <th>
+                                                    <button type="button" class="btn btn-primary" onclick="CalcularCao2()">Resultado</button>
+                                                    <button type="button" class="btn btn-danger" onclick="BorrarCao2()">Borrar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                                                </th>
                                                 <th><input class="form-control form-control-sm" type="number" id="cao2Resultado" disabled /></th>
                                             </tr>
                                         </tfoot>
@@ -315,29 +317,32 @@
                                         <tbody>
                                             <tr>
                                                 <th>Hb</th>
-                                                <th><input class="form-control form-control-sm" type="number"/></th>
+                                                <th><input class="form-control form-control-sm" type="number" id="cvo2Hb"/></th>
                                             </tr>
                                             <tr>
                                                 <th>SvO2</th>
-                                                <th><input class="form-control form-control-sm" type="number"/></th>
+                                                <th><input class="form-control form-control-sm" type="number" id="cvo2Svo2"/></th>
                                             </tr>
                                             <tr>
                                                 <th>PvO2</th>
-                                                <th><input class="form-control form-control-sm" type="number"/></th>
+                                                <th><input class="form-control form-control-sm" type="number" id="cvo2Pvo2"/></th>
                                             </tr>
                                             <tr>
                                                 <th>CONST 1</th>
-                                                <th><input class="form-control form-control-sm" type="number" value="1.34" disabled/></th>
+                                                <th><input class="form-control form-control-sm" type="number" value="" id="cvo2Const1" disabled/></th>
                                             </tr>
                                             <tr>
                                                 <th>CONST 2</th>
-                                                <th><input class="form-control form-control-sm" type="number" value="0.003" disabled/></th>
+                                                <th><input class="form-control form-control-sm" type="number" value="" id="cvo2Const2" disabled/></th>
                                             </tr>
                                         </tbody>
                                         <tfoot>
                                             <tr>
-                                                <th><button type="button" class="btn btn-primary">Resultado</button></th>
-                                                <th><input class="form-control form-control-sm" type="number" disabled /></th>
+                                                <th>
+                                                    <button type="button" class="btn btn-primary" onclick="CalcularCvo2()">Resultado</button>
+                                                    <button type="button" class="btn btn-danger" onclick="BorrarCvo2()">Borrar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                                                </th>
+                                                <th><input class="form-control form-control-sm" type="number" id="cvo2Resultado" disabled /></th>
                                             </tr>
                                         </tfoot>
                                     </table>
@@ -358,17 +363,20 @@
                                         <tbody>
                                             <tr>
                                                 <th>CaO2</th>
-                                                <th><input class="form-control form-control-sm" type="number" value="" disabled/></th>
+                                                <th><input class="form-control form-control-sm" type="number" value="" id="deltaCao2" disabled/></th>
                                             </tr>
                                             <tr>
                                                 <th>CvO2</th>
-                                                <th><input class="form-control form-control-sm" type="number" value="" disabled/></th>
+                                                <th><input class="form-control form-control-sm" type="number" value="" id="deltaCvo2" disabled/></th>
                                             </tr>
                                         </tbody>
                                         <tfoot>
                                             <tr>
-                                                <th><button type="button" class="btn btn-primary">Resultado</button></th>
-                                                <th><input class="form-control form-control-sm" type="number" disabled /></th>
+                                                <th>
+                                                    <button type="button" class="btn btn-primary" onclick="CalcularDelta()">Resultado</button>
+                                                    <button type="button" class="btn btn-danger" onclick="BorrarDelta()">Borrar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                                                </th>
+                                                <th><input class="form-control form-control-sm" type="number" id="deltaResultado" disabled /></th>
                                             </tr>
                                         </tfoot>
                                     </table>
@@ -389,17 +397,20 @@
                                         <tbody>
                                             <tr>
                                                 <th>PO2</th>
-                                                <th><input class="form-control form-control-sm" type="number" value="" /></th>
+                                                <th><input class="form-control form-control-sm" type="number" id="pafiPo2" value="" /></th>
                                             </tr>
                                             <tr>
                                                 <th>FiO2</th>
-                                                <th><input class="form-control form-control-sm" type="number" value="" /></th>
+                                                <th><input class="form-control form-control-sm" type="number" id="pafiFio2" value="" /></th>
                                             </tr>
                                         </tbody>
                                         <tfoot>
                                             <tr>
-                                                <th><button type="button" class="btn btn-primary">Resultado</button></th>
-                                                <th><input class="form-control form-control-sm" type="number" disabled /></th>
+                                                <th>
+                                                    <button type="button" class="btn btn-primary" onclick="CalcularPafi()">Resultado</button>
+                                                    <button type="button" class="btn btn-danger" onclick="BorrarPafi()">Borrar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                                                </th>
+                                                <th><input class="form-control form-control-sm" type="number" id="pafiResultado" disabled /></th>
                                             </tr>
                                         </tfoot>
                                     </table>
@@ -420,25 +431,28 @@
                                         <tbody>
                                             <tr>
                                                 <th>Pm</th>
-                                                <th><input class="form-control form-control-sm" type="number"/></th>
+                                                <th><input class="form-control form-control-sm" type="number" id="io2Pm"/></th>
                                             </tr>
                                             <tr>
                                                 <th>FiO2</th>
-                                                <th><input class="form-control form-control-sm" type="number" disabled/></th>
+                                                <th><input class="form-control form-control-sm" type="number" id="io2Fio2" disabled/></th>
                                             </tr>
                                             <tr>
                                                 <th>PO2</th>
-                                                <th><input class="form-control form-control-sm" type="number" disabled/></th>
+                                                <th><input class="form-control form-control-sm" type="number" id="io2Po2" disabled/></th>
                                             </tr>
                                             <tr>
                                                 <th>CONST 1</th>
-                                                <th><input class="form-control form-control-sm" type="number" value="100" disabled/></th>
+                                                <th><input class="form-control form-control-sm" type="number" value="" id="io2Const1" disabled/></th>
                                             </tr>
                                         </tbody>
                                         <tfoot>
                                             <tr>
-                                                <th><button type="button" class="btn btn-primary">Resultado</button></th>
-                                                <th><input class="form-control form-control-sm" type="number" disabled /></th>
+                                                <th>
+                                                    <button type="button" class="btn btn-primary" onclick="CalcularIo2()">Resultado</button>
+                                                    <button type="button" class="btn btn-danger" onclick="BorrarIo2()">Borrar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                                                </th>
+                                                <th><input class="form-control form-control-sm" type="number" id="io2Resultado" disabled /></th>
                                             </tr>
                                         </tfoot>
                                     </table>
@@ -459,17 +473,20 @@
                                         <tbody>
                                             <tr>
                                                 <th>Delta</th>
-                                                <th><input class="form-control form-control-sm" type="number" value="" disabled /></th>
+                                                <th><input class="form-control form-control-sm" type="number" value="" id="eo2Delta" disabled /></th>
                                             </tr>
                                             <tr>
                                                 <th>CaO2</th>
-                                                <th><input class="form-control form-control-sm" type="number" value="" disabled/></th>
+                                                <th><input class="form-control form-control-sm" type="number" value="" id="eo2Cao2" disabled/></th>
                                             </tr>
                                         </tbody>
                                         <tfoot>
                                             <tr>
-                                                <th><button type="button" class="btn btn-primary">Resultado</button></th>
-                                                <th><input class="form-control form-control-sm" type="number" disabled /></th>
+                                                <th>
+                                                    <button type="button" class="btn btn-primary" onclick="CalcularEo2()">Resultado</button>
+                                                    <button type="button" class="btn btn-danger" onclick="BorrarEo2()">Borrar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                                                </th>
+                                                <th><input class="form-control form-control-sm" type="number" id="eo2Resultado" disabled /></th>
                                             </tr>
                                         </tfoot>
                                     </table>
@@ -490,29 +507,32 @@
                                         <tbody>
                                             <tr>
                                                 <th>Baro</th>
-                                                <th><input class="form-control form-control-sm" type="number"/></th>
+                                                <th><input class="form-control form-control-sm" type="number" id="gradienteBaro"/></th>
                                             </tr>
                                             <tr>
                                                 <th>FiO2</th>
-                                                <th><input class="form-control form-control-sm" type="number" disabled/></th>
+                                                <th><input class="form-control form-control-sm" type="number" id="gradienteFio2" disabled/></th>
                                             </tr>
                                             <tr>
                                                 <th>PcO2</th>
-                                                <th><input class="form-control form-control-sm" type="number"/></th>
+                                                <th><input class="form-control form-control-sm" type="number" id="gradientePco2"/></th>
                                             </tr>
                                             <tr>
                                                 <th>CONST 1</th>
-                                                <th><input class="form-control form-control-sm" type="number" value="0.8" disabled/></th>
+                                                <th><input class="form-control form-control-sm" type="number" value="" id="gradienteConst1" disabled/></th>
                                             </tr>
                                             <tr>
                                                 <th>PaO2</th>
-                                                <th><input class="form-control form-control-sm" type="number" value="" disabled/></th>
+                                                <th><input class="form-control form-control-sm" type="number" value=""  id="gradientePao2" disabled/></th>
                                             </tr>
                                         </tbody>
                                         <tfoot>
                                             <tr>
-                                                <th><button type="button" class="btn btn-primary">Resultado</button></th>
-                                                <th><input class="form-control form-control-sm" type="number" disabled /></th>
+                                                <th>
+                                                    <button type="button" class="btn btn-primary" onclick="CalcularGradiente()">Resultado</button>
+                                                    <button type="button" class="btn btn-danger" onclick="BorrarGradiente()">Borrar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                                                </th>
+                                                <th><input class="form-control form-control-sm" type="number" id="gradienteResultado" disabled /></th>
                                             </tr>
                                         </tfoot>
                                     </table>
@@ -533,21 +553,24 @@
                                         <tbody>
                                             <tr>
                                                 <th>Delta</th>
-                                                <th><input class="form-control form-control-sm" type="number" value="" disabled /></th>
+                                                <th><input class="form-control form-control-sm" type="number" value="" id="gcDelta" disabled /></th>
                                             </tr>
                                             <tr>
                                                 <th>CONST 1</th>
-                                                <th><input class="form-control form-control-sm" type="number" value="100" disabled/></th>
+                                                <th><input class="form-control form-control-sm" type="number" value="" id="gcConst1" disabled/></th>
                                             </tr>
                                             <tr>
                                                 <th>CaO2</th>
-                                                <th><input class="form-control form-control-sm" type="number" value="" disabled/></th>
+                                                <th><input class="form-control form-control-sm" type="number" value="" id="gcCao2" disabled/></th>
                                             </tr>
                                         </tbody>
                                         <tfoot>
                                             <tr>
-                                                <th><button type="button" class="btn btn-primary">Resultado</button></th>
-                                                <th><input class="form-control form-control-sm" type="number" disabled /></th>
+                                                <th>
+                                                    <button type="button" class="btn btn-primary" onclick="CalcularGc()">Resultado</button>
+                                                    <button type="button" class="btn btn-danger" onclick="BorrarGc()">Borrar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                                                </th>
+                                                <th><input class="form-control form-control-sm" type="number" id="gcResultado" disabled /></th>
                                             </tr>
                                         </tfoot>
                                     </table>
@@ -568,21 +591,24 @@
                                         <tbody>
                                             <tr>
                                                 <th>Delta</th>
-                                                <th><input class="form-control form-control-sm" type="number" value="" disabled /></th>
+                                                <th><input class="form-control form-control-sm" type="number" value="" id="vo2Delta" disabled /></th>
                                             </tr>
                                             <tr>
                                                 <th>GC</th>
-                                                <th><input class="form-control form-control-sm" type="number" value="" disabled/></th>
+                                                <th><input class="form-control form-control-sm" type="number" value="" id="vo2Gc" disabled/></th>
                                             </tr>
                                             <tr>
                                                 <th>CONST 1</th>
-                                                <th><input class="form-control form-control-sm" type="number" value="10" disabled/></th>
+                                                <th><input class="form-control form-control-sm" type="number" value="" id="vo2Const1" disabled/></th>
                                             </tr>
                                         </tbody>
                                         <tfoot>
                                             <tr>
-                                                <th><button type="button" class="btn btn-primary">Resultado</button></th>
-                                                <th><input class="form-control form-control-sm" type="number" disabled /></th>
+                                                <th>
+                                                    <button type="button" class="btn btn-primary" onclick="CalcularVo2()">Resultado</button>
+                                                    <button type="button" class="btn btn-danger" onclick="BorrarVo2()">Borrar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                                                </th>
+                                                <th><input class="form-control form-control-sm" type="number" id="vo2Resultado" disabled /></th>
                                             </tr>
                                         </tfoot>
                                     </table>
@@ -596,7 +622,7 @@
                 
                 <!-- Modal footer -->
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal" onclick="BorrarTodo()">Close</button>
                 </div>
       
             </div>
@@ -608,6 +634,7 @@
 
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/calculadora.js"></script>
+    <script src="./js/util.js"></script>
     <script src="./scripts.js"></script>
 </body>
 </html>

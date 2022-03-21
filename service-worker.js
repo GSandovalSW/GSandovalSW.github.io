@@ -12,6 +12,7 @@ const staticAssets = [
     './scripts.js',
     './js/bootstrap.bundle.min.js',
     './js/calculadora.js',
+    './js/util.js',
     './manifest.webmanifest'
 ];
 
